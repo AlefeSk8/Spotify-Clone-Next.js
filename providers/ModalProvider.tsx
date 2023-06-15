@@ -15,8 +15,8 @@ export function ModalProvider() {
   }
   
   return (
-    <>
+    <div>
       <Modal />
-    </>
+    </div>
   )
 }
