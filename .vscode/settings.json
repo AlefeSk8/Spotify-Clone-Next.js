@@ -3,6 +3,7 @@
       "Figtree",
       "Supa",
       "uniqid",
+      "upsert",
       "zustand"
    ]
 }
