@@ -1,7 +1,9 @@
 'use client'
 
-import { AuthModal } from "@/components/AuthModal"
 import { useEffect, useState } from "react"
+
+import { AuthModal } from "@/components/AuthModal"
+import { UploadModal } from "@/components/UploadModal"
 
 export function ModalProvider() {
   const [isMounted, setIsMounted] = useState(false)
@@ -17,6 +19,7 @@ export function ModalProvider() {
   return (
     <div>
       <AuthModal />
+      <UploadModal />
     </div>
   )
 }
