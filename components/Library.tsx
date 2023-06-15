@@ -19,7 +19,7 @@ export function Library() {
             Your Library
           </p>
         </div>
-        <AiOutlinePlus 
+        <AiOutlinePlus
           size={20}
           onClick={onClick}
           className='text-neutral-400 cursor-pointer hover:text-white transition'
