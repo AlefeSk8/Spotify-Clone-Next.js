@@ -15,8 +15,8 @@ export function Modal({
   title,
   description,
   children,
-}: ModalProps){
-  return(
+}: ModalProps) {
+  return (
     <Dialog.Root
       open={isOpen}
       defaultOpen={isOpen}
