@@ -68,12 +68,14 @@ export function Header({ children, className }: HeaderProps) {
         <div className="flex md:hidden gap-x-2 items-center">
           <button className="rounded-full p-2 bg-white flex items-center justify-center hover:opacity-75 transition">
             <HiHome 
+              onClick={() => router.push('/')}
               size={20}
               className="text-black"
             />
           </button>
           <button className="rounded-full p-2 bg-white flex items-center justify-center hover:opacity-75 transition">
             <BiSearch 
+              onClick={() => router.push('/search')}
               size={20}
               className="text-black"
             />
