@@ -95,11 +95,12 @@ export function PlayerContent({ song, songUrl }: PlayerContentProps) {
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 h-full">
-      <div className="flex w-full justify-start">
+      <div className="flex w-full justify-start md:max-w-[calc(100vw-70%)]">
         <div className="flex items-center gap-x-4">
           <MediaItem
             data={song}
             onClick={() => {}}
+            className="md:max-w-[220px]"
           />
           <LikeButton songId={song.id}/>
         </div>

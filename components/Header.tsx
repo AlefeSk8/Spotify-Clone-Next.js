@@ -1,4 +1,5 @@
 'use client'
+
 import { useRouter } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
@@ -10,6 +11,7 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useUser } from "@/hooks/useUser";
 import { FaUserAlt } from "react-icons/fa";
 import { toast } from "react-hot-toast";
+import usePlayer from "@/hooks/usePlayer";
 
 interface HeaderProps {
   children: React.ReactNode
@@ -17,6 +19,7 @@ interface HeaderProps {
 }
 
 export function Header({ children, className }: HeaderProps) {
+  const player = usePlayer()
   const authModal = useAuthModal()
   const router = useRouter();
 
@@ -25,7 +28,8 @@ export function Header({ children, className }: HeaderProps) {
 
   const handleLogout = async () => {
     const { error } = await supabaseClient.auth.signOut()
-    // TODO: Reset any playing songs
+    player.reset()
+
     router.refresh()
 
     if (error) {
@@ -93,7 +97,7 @@ export function Header({ children, className }: HeaderProps) {
                 Logout
               </Button>
               <Button
-                onClick={() => router.push(`/account/${user.id}`)}
+                onClick={() => router.push(`/account`)}
                 className="bg-white"
               >
                 <FaUserAlt />
