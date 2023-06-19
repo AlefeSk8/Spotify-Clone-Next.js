@@ -5,6 +5,7 @@ import { Song } from "@/types"
 import Image from "next/image"
 import { twMerge } from "tailwind-merge"
 import AutoScrollText from "./AutoScrollText"
+import usePlayer from "@/hooks/usePlayer"
 
 interface MediaItemProps {
   data: Song,
@@ -13,12 +14,15 @@ interface MediaItemProps {
 }
 
 export function MediaItem({ data, onClick, className }: MediaItemProps) {
+  const player = usePlayer()
   const imageUrl = useLoadImage(data)
   
   function handleClick() {
     if (onClick) {
       return onClick(data.id)
     }
+
+    return player.setId(data.id)
   }
 
   return (

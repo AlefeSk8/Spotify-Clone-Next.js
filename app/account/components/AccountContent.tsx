@@ -48,7 +48,7 @@ const AccountContent = () => {
       </div>
       )}
       {subscription && (
-        <div className="flex flex-col gap-y-4">
+        <div className="flex flex-col gap-y-4 max-sm:items-center">
           <p>You are currently on the 
             <b> 
               { //@ts-ignore
