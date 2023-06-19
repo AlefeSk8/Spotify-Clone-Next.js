@@ -11,6 +11,7 @@
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.4",
     "@radix-ui/react-slider": "^1.1.2",
+    "@stripe/stripe-js": "^1.54.0",
     "@supabase/auth-helpers-nextjs": "^0.7.2",
     "@supabase/auth-helpers-react": "^0.4.0",
     "@supabase/auth-ui-react": "^0.4.2",
@@ -32,8 +33,8 @@
     "react-hook-form": "^7.44.3",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.9.0",
+    "react-spinners": "^0.13.8",
     "stripe": "^12.9.0",
-    "supabase": ">=1.8.1",
     "tailwind-merge": "^1.13.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3",
@@ -42,6 +43,8 @@
     "zustand": "^4.3.8"
   },
   "devDependencies": {
-    "@types/uniqid": "^5.3.2"
+    "@types/uniqid": "^5.3.2",
+    "encoding": "^0.1.13",
+    "supabase": "^1.64.2"
   }
 }

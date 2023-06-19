@@ -13,43 +13,41 @@ export function Slider({ value = 1, onChange }: SliderProps) {
   }
 
   return (
-    <div>
-      <RadixSlider.Root
+    <RadixSlider.Root
+      className="
+        relative 
+        flex 
+        items-center 
+        select-none 
+        touch-none 
+        w-full 
+        h-10
+      "
+      defaultValue={[1]}
+      value={[value]}
+      onValueChange={handleChange}
+      max={1}
+      step={0.1}
+      aria-label="Volume"
+    >
+      <RadixSlider.Track 
         className="
-          relative
-          flex
-          items-center
-          select-none
-          touch-none
-          w-full
-          h-10
+          bg-neutral-600 
+          relative 
+          grow 
+          rounded-full 
+          h-[3px]
         "
-        defaultValue={[1]}
-        value={[value]}
-        onValueChange={handleChange}
-        max={1}
-        step={0.1}
-        aria-label="Volume"
       >
-        <RadixSlider.Track
+        <RadixSlider.Range 
           className="
-            bg-neutral-600
-            relative
-            grow
-            rounded-full
-            h-[3px]
-          "
-        >
-          <RadixSlider.Range 
-            className="
-              absolute
-              bg-white
-              rounded-full
-              h-full
-            "
-          />
-        </RadixSlider.Track>
-      </RadixSlider.Root>
-    </div>
+            absolute 
+            bg-white 
+            rounded-full 
+            h-full
+          " 
+        />
+      </RadixSlider.Track>
+    </RadixSlider.Root>
   )
 }

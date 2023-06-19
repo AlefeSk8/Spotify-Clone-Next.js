@@ -3,13 +3,16 @@
 import { useLoadImage } from "@/hooks/useLoadImage"
 import { Song } from "@/types"
 import Image from "next/image"
+import { twMerge } from "tailwind-merge"
+import AutoScrollText from "./AutoScrollText"
 
 interface MediaItemProps {
   data: Song,
   onClick: (id: string) => void,
+  className?: string,
 }
 
-export function MediaItem({ data, onClick }: MediaItemProps) {
+export function MediaItem({ data, onClick, className }: MediaItemProps) {
   const imageUrl = useLoadImage(data)
   
   function handleClick() {
@@ -23,7 +26,7 @@ export function MediaItem({ data, onClick }: MediaItemProps) {
   return (
     <div
       onClick={handleClick}
-      className="
+      className={twMerge(`
         flex
         items-center
         gap-x-3
@@ -32,7 +35,11 @@ export function MediaItem({ data, onClick }: MediaItemProps) {
         w-full
         p-2
         rounded-md
-      "
+        max-exsm:min-w-[calc(100vw-80px)]
+        max-exsm:max-w-[calc(100vw-80px)]
+      `,
+        className
+      )}
     >
       <div
         className="
@@ -50,7 +57,16 @@ export function MediaItem({ data, onClick }: MediaItemProps) {
           className="object-cover"
         />
       </div>
-      <div
+
+      <AutoScrollText
+        title={data.title}
+        text={data.author}
+        className="flex flex-col gap-y-1 overflow-hidden"
+        titleTwCss="text-white truncate"
+        textTwCss="text-neutral-400 text-sm truncate"
+      />
+
+      {/* <div
         className="
           flex
           flex-col
@@ -64,7 +80,7 @@ export function MediaItem({ data, onClick }: MediaItemProps) {
         <p className="text-neutral-400 text-sm truncate">
           {data.author}
         </p>
-      </div>
+      </div> */}
     </div>
   )
 }

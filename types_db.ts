@@ -1,5 +1,3 @@
-yarn run v1.22.19
-$ /home/alefe/Spotify-Clone-Next.js/node_modules/.bin/supabase gen types typescript --project-id muaprplzwuffgjeikeal --schema public
 export type Json =
   | string
   | number
@@ -299,4 +297,3 @@ export interface Database {
     }
   }
 }
-Done in 2.62s.

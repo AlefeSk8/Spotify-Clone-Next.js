@@ -58,7 +58,7 @@ export function SongItem({ data, onClick }: SongItemProps) {
           items-start
           w-full
           pt-4
-          gap-y-1  
+          gap-y-1
         "
       >
         <p
@@ -79,12 +79,9 @@ export function SongItem({ data, onClick }: SongItemProps) {
           absolute
           bottom-24
           right-5
-
         "
       >
-        <PlayButton
-          
-        />
+        <PlayButton />
       </div>
     </div>
   )

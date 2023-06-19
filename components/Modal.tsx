@@ -27,7 +27,7 @@ export function Modal({
           className="bg-neutral-900/90 backdrop-blur-sm fixed inset-0" 
         />
         <Dialog.Content 
-          className="fixed drop-shadow-md border border-neutral-700 top-[50%] left-[50%] max-h-full h-ful md:h-auto md:max-h-[85vh] w-full md:w-[90vw] md:max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-md bg-neutral-800 p-[25px] focus:outline-none"
+          className="fixed drop-shadow-md border border-neutral-700 top-[50%] left-[50%] max-h-full h-ful md:h-auto md:max-h-[85vh] w-full md:w-[90vw] md:max-w-[450px] max-sm:max-w-[calc(100vw-45%)] max-esm:max-w-[calc(100vw-25%)] max-exsm:max-w-[calc(100vw-10%)] translate-x-[-50%] translate-y-[-50%] rounded-md bg-neutral-800 p-[25px] focus:outline-none"
         >
           <Dialog.Title
             className="text-xl text-center font-bold mb-4"
