@@ -19,14 +19,13 @@ export function MediaItem({ data, onClick, className }: MediaItemProps) {
     if (onClick) {
       return onClick(data.id)
     }
-
-    // TODO: Default turn on player
   }
 
   return (
     <div
       onClick={handleClick}
       className={twMerge(`
+        group
         flex
         items-center
         gap-x-3
@@ -58,15 +57,7 @@ export function MediaItem({ data, onClick, className }: MediaItemProps) {
         />
       </div>
 
-      <AutoScrollText
-        title={data.title}
-        text={data.author}
-        className="flex flex-col gap-y-1 overflow-hidden"
-        titleTwCss="text-white truncate"
-        textTwCss="text-neutral-400 text-sm truncate"
-      />
-
-      {/* <div
+      <div
         className="
           flex
           flex-col
@@ -74,13 +65,18 @@ export function MediaItem({ data, onClick, className }: MediaItemProps) {
           overflow-hidden
         "
       >
-        <p className="text-white truncate">
-          {data.title}
-        </p>
-        <p className="text-neutral-400 text-sm truncate">
-          {data.author}
-        </p>
-      </div> */}
+        <AutoScrollText
+          text={data.title}
+          className="text-white truncate"
+          // TODO: Animate when click in card too
+        />
+
+        <AutoScrollText
+          text={data.author}
+      className="text-neutral-400 text-sm truncate"
+          // TODO: Animate when click in card too
+        />
+      </div>
     </div>
   )
 }

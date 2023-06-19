@@ -37,6 +37,7 @@ export function Slider({ value = 1, onChange }: SliderProps) {
           grow 
           rounded-full 
           h-[3px]
+          cursor-pointer
         "
       >
         <RadixSlider.Range 
