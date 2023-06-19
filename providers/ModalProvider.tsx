@@ -23,10 +23,10 @@ export function ModalProvider({ products }: ModalProviderProps) {
   }
   
   return (
-    <div>
+    <>
       <AuthModal />
       <SubscribeModal products={products}/>
       <UploadModal />
-    </div>
+    </>
   )
 }

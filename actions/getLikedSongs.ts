@@ -13,12 +13,7 @@ export async function getLikedSongs(): Promise<Song[]> {
     }
   } = await supabase.auth.getSession()
 
-  const { data, error } = await supabase.from('liked_songs').select('*, songs(*)').eq('user_id', session?.user?.id).order('created_at', { ascending: false });
-
-  if (error) {
-    console.log(error)
-    return []
-  }
+  const { data } = await supabase.from('liked_songs').select('*, songs(*)').eq('user_id', session?.user?.id).order('created_at', { ascending: false });
 
   if (!data) {
     return []
