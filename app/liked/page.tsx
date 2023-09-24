@@ -57,7 +57,7 @@ export default async function Liked(props : LikedProps) {
               mt-4
               md:mt-0
             ">
-              <p className="hidden md:block font-semibold text-sm">
+              <p className="max-sm:hidden md:block font-semibold text-sm">
                 Playlist
               </p>
               <h1 className="text-white text-4xl sm:text-5xl lg:text-7xl font-bold">

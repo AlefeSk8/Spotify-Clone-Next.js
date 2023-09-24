@@ -136,7 +136,7 @@ export function PlayerContent({ song, songUrl }: PlayerContentProps) {
       </div>
 
       <div className="
-        hidden
+        max-sm:hidden
         h-full
         md:flex
         justify-center
@@ -174,7 +174,7 @@ export function PlayerContent({ song, songUrl }: PlayerContentProps) {
       </div>
 
       <div className="
-        hidden
+        max-sm:hidden
         md:flex
         w-full
         justify-end

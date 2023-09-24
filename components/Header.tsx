@@ -49,7 +49,7 @@ export function Header({ children, className }: HeaderProps) {
       className
     )}>
       <div className="w-full mb-4 flex items-center justify-between ">
-        <div className="hidden md:flex gap-x-2 items-center">
+        <div className="max-sm:hidden md:flex gap-x-2 items-center">
           <button
             onClick={() => router.back()}
             className="rounded-full bg-black flex items-center justify-center hover:opacity-75 transition"
