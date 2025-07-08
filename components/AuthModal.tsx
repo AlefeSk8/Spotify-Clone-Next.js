@@ -44,7 +44,7 @@ export function AuthModal(props : AuthModalProps){
         theme="dark"
         magicLink
         // providers={['github', 'google', 'apple']}
-        providers={['github']}
+        providers={[]}
         supabaseClient={supabaseClient}
         appearance={{
           theme: ThemeSupa,
