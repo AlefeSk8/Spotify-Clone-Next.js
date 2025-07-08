@@ -98,3 +98,22 @@ Running commands with npm or yarn `npm run [command] or yarn [command]`
 | command         | description                              |
 | :-------------- | :--------------------------------------- |
 | `dev`           | Starts a development instance of the app |
+
+
+### Music Licenses
+
+```shell
+Music from #Uppbeat (free for Creators!):
+https://uppbeat.io/t/atm/follow-your-heart
+License code: VQZRYGKLIQ7FCCRP
+```
+```shell
+Music from #Uppbeat (free for Creators!):
+https://uppbeat.io/t/all-good-folks/when-we-get-there
+License code: G8SNM7WEFQHXIBPN
+```
+```shell
+Music from #Uppbeat (free for Creators!):
+https://uppbeat.io/t/soundroll/all-the-things-you-love
+License code: VUJTMYRP1ZZLSMKB
+```
