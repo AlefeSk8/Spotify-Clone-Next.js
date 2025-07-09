@@ -4,6 +4,7 @@ import { useLoadImage } from "@/hooks/useLoadImage"
 import { Song } from "@/types"
 import Image from "next/image"
 import { PlayButton } from "./PlayButton"
+import AutoScrollText from "./AutoScrollText"
 
 interface SongItemProps {
   data: Song,
@@ -61,18 +62,26 @@ export function SongItem({ data, onClick }: SongItemProps) {
           gap-y-1
         "
       >
-        <p
+        <AutoScrollText
+          text={data.title}
           className="
             font-semibold
             truncate
-            w-full
+            w-full 
           "
-        >
-          {data.title}
-        </p>
-        <p className="text-neutral-400 text-sm pb-4 w-full truncate">
-          By {data.author}
-        </p>
+          // TODO: Animate when click in card too
+        />
+        <AutoScrollText
+          text={(`By ${data.author}`)}
+          className="
+            text-neutral-400 
+            text-sm 
+            pb-4 
+            w-full 
+            truncate
+          "
+          // TODO: Animate when click in card too
+        />
       </div>
       <div 
         className="

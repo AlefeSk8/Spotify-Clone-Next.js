@@ -77,7 +77,7 @@ export function MediaItem({ data, onClick, className }: MediaItemProps) {
 
         <AutoScrollText
           text={data.author}
-      className="text-neutral-400 text-sm truncate"
+          className="text-neutral-400 text-sm truncate"
           // TODO: Animate when click in card too
         />
       </div>
